@@ -72,28 +72,28 @@
                                 <rect key="frame" x="184" y="109" width="46" height="30"/>
                                 <state key="normal" title="東京都"/>
                                 <connections>
-                                    <segue destination="6oS-oK-Kbn" kind="unwind" unwindAction="exitPrefecture1WithSegue:" id="wY7-Ch-qep"/>
+                                    <action selector="pushButton1:" destination="5DU-aT-vfl" eventType="touchUpInside" id="hu3-Ez-3TQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-ir-PiC">
                                 <rect key="frame" x="176" y="160" width="62" height="30"/>
                                 <state key="normal" title="神奈川県"/>
                                 <connections>
-                                    <segue destination="6oS-oK-Kbn" kind="unwind" unwindAction="exitPrefecture2WithSegue:" id="pfp-CY-dfb"/>
+                                    <action selector="pushButton2:" destination="5DU-aT-vfl" eventType="touchUpInside" id="Gdl-Le-gk7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjo-gW-JH9">
                                 <rect key="frame" x="184" y="211" width="46" height="30"/>
                                 <state key="normal" title="埼玉県"/>
                                 <connections>
-                                    <segue destination="6oS-oK-Kbn" kind="unwind" unwindAction="exitPrefecture3WithSegue:" id="mRQ-Ed-v4T"/>
+                                    <action selector="pushButton3:" destination="5DU-aT-vfl" eventType="touchUpInside" id="EYB-Mk-YZg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c69-gM-Spp">
                                 <rect key="frame" x="184" y="260" width="46" height="30"/>
                                 <state key="normal" title="千葉県"/>
                                 <connections>
-                                    <segue destination="6oS-oK-Kbn" kind="unwind" unwindAction="exitPrefecture4WithSegue:" id="Daz-QC-OMD"/>
+                                    <action selector="pushButton4:" destination="5DU-aT-vfl" eventType="touchUpInside" id="kFf-1n-2Qk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,7 +115,6 @@
                     <navigationItem key="navigationItem" id="Scu-00-r7i">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="97u-4c-Lyn">
                             <connections>
-                                <action selector="pushButtonCancel:" destination="5DU-aT-vfl" id="eES-2v-Tzg"/>
                                 <segue destination="6oS-oK-Kbn" kind="unwind" unwindAction="exitCancelWithSegue:" id="8bB-bP-dxd"/>
                             </connections>
                         </barButtonItem>
@@ -125,6 +124,10 @@
                         <outlet property="prefecture2" destination="ib4-ir-PiC" id="uhT-xK-Gpr"/>
                         <outlet property="prefecture3" destination="Vjo-gW-JH9" id="OIX-oc-j86"/>
                         <outlet property="prefecture4" destination="c69-gM-Spp" id="4Tk-eE-k5w"/>
+                        <segue destination="6oS-oK-Kbn" kind="unwind" identifier="tokyo" unwindAction="exitPrefecture1WithSegue:" id="3MT-VH-rbE"/>
+                        <segue destination="6oS-oK-Kbn" kind="unwind" identifier="kanagawa" unwindAction="exitPrefecture2WithSegue:" id="d13-5a-zwW"/>
+                        <segue destination="6oS-oK-Kbn" kind="unwind" identifier="saitama" unwindAction="exitPrefecture3WithSegue:" id="VZh-fi-teU"/>
+                        <segue destination="6oS-oK-Kbn" kind="unwind" identifier="chiba" unwindAction="exitPrefecture4WithSegue:" id="3bO-vd-A85"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp1-9P-7kp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

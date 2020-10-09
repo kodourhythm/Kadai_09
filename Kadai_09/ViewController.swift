@@ -20,19 +20,20 @@ class ViewController: UIViewController {
     
     @IBAction func exitPrefecture1(segue:UIStoryboardSegue){
         let second = segue.source as! SecondViewController
-        self.displayLabel.text = second.prefecture1.currentTitle
+        self.displayLabel.text = second.selectedPrefectureName
+        print(second.selectedPrefectureName)
     }
     @IBAction func exitPrefecture2(segue:UIStoryboardSegue){
         let second = segue.source as! SecondViewController
-        self.displayLabel.text = second.prefecture2.currentTitle
+        self.displayLabel.text = second.selectedPrefectureName
     }
     @IBAction func exitPrefecture3(segue:UIStoryboardSegue){
         let second = segue.source as! SecondViewController
-        self.displayLabel.text = second.prefecture3.currentTitle
+        self.displayLabel.text = second.selectedPrefectureName
     }
     @IBAction func exitPrefecture4(segue:UIStoryboardSegue){
         let second = segue.source as! SecondViewController
-        self.displayLabel.text = second.prefecture4.currentTitle
+        self.displayLabel.text = second.selectedPrefectureName
     }
 
     @IBAction func exitCancel(segue:UIStoryboardSegue){
